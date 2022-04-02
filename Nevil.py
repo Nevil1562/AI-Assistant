@@ -316,5 +316,9 @@ if __name__ == '__main__':
             speak('thanks for using me Sir, have a good day.')
             sys.exit()
 
+        # elif 'kill' in query:
+            # speak("okay sir. Good Bye")
+            # sys.exit()
+
         elif 'wake up' in query:
             speak('Yes sir. i am always available for you')
