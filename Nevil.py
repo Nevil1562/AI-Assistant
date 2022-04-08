@@ -23,9 +23,6 @@ import requests
 from selenium.webdriver.common.keys import Keys
 from requests import get
 
-# hour = int(datetime.now().hour)
-# minute = int(datetime.now().minute)+1
-
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # print(voices[1].id)
