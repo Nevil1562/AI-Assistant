@@ -23,7 +23,7 @@ import requests
 from selenium.webdriver.common.keys import Keys
 from requests import get
 
-engine = pyttsx3.init('sapi5')
+engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 # print(voices[1].id)
 engine.setProperty('voice', voices[1].id)
@@ -98,10 +98,8 @@ def alarm1():
             break;
 
 if __name__ == '__main__':
-    # speak("Welcome to New World")
     wish()
     while True:
-    # if 1:
         query = takecommand().lower()
 
         if "who are you" in query:
@@ -312,10 +310,6 @@ if __name__ == '__main__':
         elif 'sleep now' in query:
             speak('thanks for using me Sir, have a good day.')
             sys.exit()
-
-        # elif 'kill' in query:
-            # speak("okay sir. Good Bye")
-            # sys.exit()
 
         elif 'wake up' in query:
             speak('Yes sir. i am always available for you')
