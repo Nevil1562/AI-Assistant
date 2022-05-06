@@ -145,16 +145,19 @@ if __name__ == '__main__':
             speak("okay sir. closing command prompt")
             os.system("taskkill /f /im cmd.exe")
 
-        # elif 'open camera' in query:
-        #     cap = cv2.VideoCapture(0)
-        #     while True:
-        #         ret, img = cap.read()
-        #         cv2.imshow('webcam', img)
-        #         k = cv2.waitkey(50)
-        #         if k==27:
-        #             break;
-        #     cap.release()
-        #     cv2.destroyAllWindows()
+        elif 'open camera' in query:
+            speak("Camera is now turned on")
+            captureDevice = cv2.VideoCapture(0)
+
+            while True:
+                ret, frame = captureDevice.read() 
+
+                cv2.imshow('my frame', frame)
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break
+
+            captureDevice.release()
+            cv2.destroyAllWindows()
 
         elif 'set alarm' in query:
             speak("OKay Sir, At what time i will set an alarm?")
